@@ -1,0 +1,62 @@
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import NearestNeighbors
+
+# Load dataset
+df = pd.read_csv("spotify_songs.csv")
+
+# Features commonly available in Spotify datasets
+features = [
+    'danceability',
+    'energy',
+    'loudness',
+    'speechiness',
+    'acousticness',
+    'instrumentalness',
+    'liveness',
+    'valence',
+    'tempo'
+]
+
+# Remove missing values
+df = df.dropna(subset=features)
+
+# Scale features
+scaler = StandardScaler()
+X = scaler.fit_transform(df[features])
+
+# Train recommendation model
+model = NearestNeighbors(
+    n_neighbors=6,
+    algorithm='auto',
+    metric='euclidean'
+)
+
+model.fit(X)
+
+
+def recommend_song(song_name):
+    song = df[df['track_name'].str.lower() == song_name.lower()]
+
+    if song.empty:
+        print("Song not found.")
+        return
+
+    song_index = song.index[0]
+
+    distances, indices = model.kneighbors(
+        [X[song_index]]
+    )
+
+    print(f"\nRecommendations based on '{song_name}':\n")
+
+    for idx in indices[0][1:]:
+        print(
+            f"{df.iloc[idx]['track_name']} "
+            f"by {df.iloc[idx]['artist_name']}"
+        )
+
+
+# User input
+song_name = input("Enter a song name: ")
+recommend_song(song_name)
