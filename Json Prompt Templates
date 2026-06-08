@@ -1,0 +1,463 @@
+Here are 30 reusable JSON prompt templates covering many common AI tasks. You can adapt them for ChatGPT, Claude, Gemini, local LLMs, or agent frameworks.
+
+# 1. Text Summarization
+
+```json
+{
+  "task": "summarize",
+  "input": "<text>",
+  "output": {
+    "summary": "",
+    "key_points": [],
+    "action_items": []
+  }
+}
+```
+
+# 2. Sentiment Analysis
+
+```json
+{
+  "task": "sentiment_analysis",
+  "input": "<text>",
+  "output": {
+    "sentiment": "",
+    "confidence": 0,
+    "reasons": []
+  }
+}
+```
+
+# 3. Keyword Extraction
+
+```json
+{
+  "task": "extract_keywords",
+  "input": "<text>",
+  "output": {
+    "keywords": []
+  }
+}
+```
+
+# 4. Entity Extraction
+
+```json
+{
+  "task": "extract_entities",
+  "input": "<text>",
+  "output": {
+    "people": [],
+    "companies": [],
+    "locations": [],
+    "dates": []
+  }
+}
+```
+
+# 5. Email Writing
+
+```json
+{
+  "task": "write_email",
+  "purpose": "",
+  "recipient": "",
+  "tone": "",
+  "output": {
+    "subject": "",
+    "email_body": ""
+  }
+}
+```
+
+# 6. Blog Post Generation
+
+```json
+{
+  "task": "write_blog",
+  "topic": "",
+  "target_audience": "",
+  "word_count": 1500,
+  "output": {
+    "title": "",
+    "outline": [],
+    "article": ""
+  }
+}
+```
+
+# 7. Social Media Post
+
+```json
+{
+  "task": "create_social_post",
+  "platform": "",
+  "topic": "",
+  "tone": "",
+  "output": {
+    "post": "",
+    "hashtags": []
+  }
+}
+```
+
+# 8. Product Description
+
+```json
+{
+  "task": "product_description",
+  "product_name": "",
+  "features": [],
+  "output": {
+    "short_description": "",
+    "long_description": ""
+  }
+}
+```
+
+# 9. Resume Optimization
+
+```json
+{
+  "task": "resume_review",
+  "resume_text": "",
+  "job_description": "",
+  "output": {
+    "missing_skills": [],
+    "improvements": [],
+    "optimized_resume": ""
+  }
+}
+```
+
+# 10. Cover Letter
+
+```json
+{
+  "task": "cover_letter",
+  "job_title": "",
+  "company": "",
+  "resume": "",
+  "output": {
+    "cover_letter": ""
+  }
+}
+```
+
+# 11. Interview Preparation
+
+```json
+{
+  "task": "interview_prep",
+  "job_role": "",
+  "output": {
+    "likely_questions": [],
+    "sample_answers": []
+  }
+}
+```
+
+# 12. Research Assistant
+
+```json
+{
+  "task": "research_topic",
+  "topic": "",
+  "output": {
+    "overview": "",
+    "key_findings": [],
+    "sources_needed": []
+  }
+}
+```
+
+# 13. Fact Checking
+
+```json
+{
+  "task": "fact_check",
+  "claim": "",
+  "output": {
+    "verdict": "",
+    "confidence": 0,
+    "reasoning": ""
+  }
+}
+```
+
+# 14. Meeting Notes
+
+```json
+{
+  "task": "meeting_summary",
+  "transcript": "",
+  "output": {
+    "summary": "",
+    "decisions": [],
+    "action_items": []
+  }
+}
+```
+
+# 15. Project Planning
+
+```json
+{
+  "task": "project_plan",
+  "goal": "",
+  "deadline": "",
+  "output": {
+    "milestones": [],
+    "tasks": [],
+    "risks": []
+  }
+}
+```
+
+# 16. Coding Assistant
+
+```json
+{
+  "task": "generate_code",
+  "language": "",
+  "requirements": "",
+  "output": {
+    "code": "",
+    "explanation": ""
+  }
+}
+```
+
+# 17. Debugging
+
+```json
+{
+  "task": "debug_code",
+  "language": "",
+  "code": "",
+  "error": "",
+  "output": {
+    "issue": "",
+    "solution": "",
+    "corrected_code": ""
+  }
+}
+```
+
+# 18. Code Review
+
+```json
+{
+  "task": "review_code",
+  "code": "",
+  "output": {
+    "issues": [],
+    "security_risks": [],
+    "improvements": []
+  }
+}
+```
+
+# 19. SQL Generator
+
+```json
+{
+  "task": "generate_sql",
+  "database_schema": "",
+  "requirement": "",
+  "output": {
+    "query": "",
+    "explanation": ""
+  }
+}
+```
+
+# 20. Data Analysis
+
+```json
+{
+  "task": "analyze_data",
+  "dataset_description": "",
+  "goal": "",
+  "output": {
+    "insights": [],
+    "patterns": [],
+    "recommendations": []
+  }
+}
+```
+
+# 21. Trading Analysis
+
+```json
+{
+  "task": "market_analysis",
+  "symbol": "",
+  "timeframes": [],
+  "output": {
+    "bias": "",
+    "confidence": 0,
+    "entry": 0,
+    "stop_loss": 0,
+    "take_profit": 0
+  }
+}
+```
+
+# 22. Risk Management
+
+```json
+{
+  "task": "risk_assessment",
+  "account_balance": 0,
+  "trade_setup": {},
+  "output": {
+    "position_size": 0,
+    "risk_percent": 0,
+    "approval": true
+  }
+}
+```
+
+# 23. Business Idea Validation
+
+```json
+{
+  "task": "validate_business",
+  "idea": "",
+  "target_market": "",
+  "output": {
+    "strengths": [],
+    "weaknesses": [],
+    "opportunities": [],
+    "threats": []
+  }
+}
+```
+
+# 24. Competitor Analysis
+
+```json
+{
+  "task": "competitor_analysis",
+  "business": "",
+  "industry": "",
+  "output": {
+    "competitors": [],
+    "advantages": [],
+    "gaps": []
+  }
+}
+```
+
+# 25. Sales Copy
+
+```json
+{
+  "task": "sales_copy",
+  "product": "",
+  "target_customer": "",
+  "output": {
+    "headline": "",
+    "body": "",
+    "cta": ""
+  }
+}
+```
+
+# 26. Customer Support Agent
+
+```json
+{
+  "task": "customer_support",
+  "customer_message": "",
+  "output": {
+    "issue_type": "",
+    "response": "",
+    "escalate": false
+  }
+}
+```
+
+# 27. Prompt Generator
+
+```json
+{
+  "task": "generate_prompt",
+  "goal": "",
+  "output": {
+    "prompt": "",
+    "tips": []
+  }
+}
+```
+
+# 28. AI Agent Planner
+
+```json
+{
+  "task": "agent_planner",
+  "objective": "",
+  "available_tools": [],
+  "output": {
+    "steps": [],
+    "tool_usage": [],
+    "expected_result": ""
+  }
+}
+```
+
+# 29. Workflow Automation
+
+```json
+{
+  "task": "workflow_design",
+  "business_process": "",
+  "output": {
+    "trigger": "",
+    "steps": [],
+    "automations": []
+  }
+}
+```
+
+# 30. Multi-Agent System
+
+```json
+{
+  "task": "multi_agent_coordination",
+  "goal": "",
+  "agents": [
+    {
+      "name": "ResearchAgent",
+      "responsibility": ""
+    },
+    {
+      "name": "AnalysisAgent",
+      "responsibility": ""
+    },
+    {
+      "name": "ExecutionAgent",
+      "responsibility": ""
+    }
+  ],
+  "output": {
+    "workflow": [],
+    "deliverable": ""
+  }
+}
+```
+
+A useful pattern is to standardize every template around:
+
+```json
+{
+  "task": "",
+  "role": "",
+  "context": {},
+  "constraints": [],
+  "input": {},
+  "reasoning_requirements": {},
+  "output_schema": {}
+}
+```
